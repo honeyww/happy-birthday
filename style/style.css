@@ -114,6 +114,7 @@ body {
 
 .six {
   position: relative;
+  z-index: 1;
 }
 
 .six img {
@@ -125,9 +126,16 @@ body {
 .six .hat {
   position: absolute;
   width: 80px;
-  top: -60px;
+  top: -50px;
   left: 50%;
-  /* transform: scale(0.1); */
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* New class for Jerry's image */
+.six .jerry-img {
+  width: 200px;  /* Adjust as needed */
+  height: auto;
 }
 
 .baloons img {
@@ -235,25 +243,26 @@ body {
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
-    left: 40%;
+    top: -40px;
   }
 }
 
 @media screen and (max-height: 800px) {
   .six .hat {
-    left: 37%;
+    top: -30px;
   }
 }
 
 @media screen and (max-height: 700px) {
   .six .hat {
-    left: 32%;
+    top: -20px;
   }
 }
 
 @media screen and (max-height: 850px) and (max-width: 450px) {
   .six .hat {
-    left: 32%;
+    top: -15px;
+    width: 60px;
   }
 }
 
@@ -282,6 +291,10 @@ body {
   .six .hat {
     width: 50px;
     top: -20px;
+  }
+
+  .six .jerry-img {
+    width: 150px;  /* Adjust for smaller screens */
   }
 
   .wish-hbd {
